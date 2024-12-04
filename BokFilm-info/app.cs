@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BokFilm_info
 {
-    internal class Class1
+    internal class App
     {
 
         public void Run()
