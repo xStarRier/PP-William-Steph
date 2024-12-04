@@ -39,11 +39,11 @@ namespace BokFilm_info
         public void ShowMovies()
         {
 
-            Console.Write("List of your movies: ");
+            Console.Write("List of your movies:\n ");
             foreach (var movie in movies)
             {
-                Console.WriteLine($"{movie._movie}");
-                Console.WriteLine($"About: {movie._genre} {movie._year}");
+                Console.WriteLine($"{movie._movie} ({movie._year})");
+                Console.WriteLine($"About: {movie._genre}");
                 Console.Write("--------------------------------");
             }
 
