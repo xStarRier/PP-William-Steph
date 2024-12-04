@@ -44,7 +44,7 @@ namespace BokFilm_info
             {
                 Console.WriteLine($"{movie._movie} ({movie._year})");
                 Console.WriteLine($"About: {movie._genre}");
-                Console.Write("--------------------------------");
+                Console.WriteLine("--------------------------------");
             }
 
 
