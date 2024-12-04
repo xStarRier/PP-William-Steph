@@ -5,5 +5,6 @@
 //Når alle spørsmål er besvart skal man kunne få se boken eller filmen man skrev inn som et produkt, med alle egenskaper listet opp.
 //BONUS:
 //Legg til mulighet for å skrive inn flere bøker eller filmer, her trenger man å ta i bruk lister!
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Hello");
+
+var app = new App();
+app.Run();
