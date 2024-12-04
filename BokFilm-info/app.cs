@@ -8,11 +8,15 @@ namespace BokFilm_info
 {
     internal class App
     {
+        public string _movie { get; private set; }
+        public string _year { get; private set; }
+        public string _genre { get; private set; }
 
         List<Movie> movies = new List<Movie>()
         {
             new Movie("Shrek", "2001", "Fantasy"),
             new Movie("Shrek 2", "2004", "Action/Adventure")
+            
         };
 
         public void Run()
@@ -28,8 +32,11 @@ namespace BokFilm_info
                     ShowMovies();
                     break;
                 case "2":
+                    AddMovies();
+                 
                     break;
                 case "3":
+                    
                     break;
 
             }
@@ -48,6 +55,17 @@ namespace BokFilm_info
             }
 
 
+        }
+        public void AddMovies()
+        {   
+            Console.Write("Movie title: ");
+            _movie = Console.ReadLine();
+             Console.WriteLine("Year of the movie: ");
+            _year = Console.ReadLine();
+            Console.WriteLine("Genre of the movie: ");
+            _genre = Console.ReadLine();
+            movies.Add(new Movie(_movie, _year, _genre));
+            Run();
         }
     }
 }
