@@ -57,7 +57,7 @@ namespace BokFilm_info
                 Console.WriteLine($"About: {movie._genre}");
                 Console.WriteLine("--------------------------------");
             }
-            Console.WriteLine("Press ENTER for menu")
+            Console.WriteLine("Press ENTER to go back to menu");
             Console.ReadLine();
         }
 
@@ -85,7 +85,7 @@ namespace BokFilm_info
             Console.WriteLine($"About: {_genre}");
             Console.WriteLine("--------------------------------");
 
-            Console.WriteLine("Press ENTER for menu")
+            Console.WriteLine("Press ENTER to go back to menu");
             Console.ReadLine();
         }
     }
