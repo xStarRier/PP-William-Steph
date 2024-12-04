@@ -21,9 +21,11 @@ namespace BokFilm_info
 
         public void Run()
         {
+            
             bool running = true;
             while (running)
-            {
+            {   
+                Console.Clear();
                 Console.WriteLine("1. See movie list");
                 Console.WriteLine("2. Add movie");
                 Console.WriteLine("3. Quit");
@@ -49,7 +51,7 @@ namespace BokFilm_info
 
         public void ShowMovies()
         {
-
+            Console.Clear();
             Console.Write("List of your movies:\n");
             foreach (var movie in movies)
             {
@@ -57,12 +59,13 @@ namespace BokFilm_info
                 Console.WriteLine($"About: {movie._genre}");
                 Console.WriteLine("--------------------------------");
             }
-
+            
 
         }
 
         public void AddMovies()
-        {   
+        {
+            Console.Clear();
             Console.Write("Movie title: ");
             _movie = Console.ReadLine();
              Console.WriteLine("Year of the movie: ");
@@ -70,7 +73,17 @@ namespace BokFilm_info
             Console.WriteLine("Genre of the movie: ");
             _genre = Console.ReadLine();
             movies.Add(new Movie(_movie, _year, _genre));
-            Run();
+            ShowNewest();
+        }
+
+        public void ShowNewest()
+        {
+            Console.Clear();
+            Console.WriteLine($"Added new movie:\n ");
+            Console.WriteLine($"{_movie} ({_year})");
+            Console.WriteLine($"About: {_genre}");
+            Console.WriteLine("--------------------------------");
+            Console.ReadLine();
         }
     }
 }
