@@ -21,25 +21,29 @@ namespace BokFilm_info
 
         public void Run()
         {
-            Console.WriteLine("1. See movie list");
-            Console.WriteLine("2. Add movie");
-            Console.WriteLine("3. Quit");
-            var input = Console.ReadLine();
-
-            switch (input)
+            bool running = true;
+            while (running)
             {
-                case "1":
-                    ShowMovies();
-                    break;
-                case "2":
-                    AddMovies();
-                 
-                    break;
-                case "3":
-                    
-                    break;
+                Console.WriteLine("1. See movie list");
+                Console.WriteLine("2. Add movie");
+                Console.WriteLine("3. Quit");
+                var input = Console.ReadLine();
 
+                switch (input)
+                {
+                    case "1":
+                        ShowMovies();
+                        break;
+                    case "2":
+                        AddMovies();
+                        break;
+                    case "3":
+                        running = false;
+                        break;
+
+                }
             }
+            
 
         }
 
@@ -56,6 +60,7 @@ namespace BokFilm_info
 
 
         }
+
         public void AddMovies()
         {   
             Console.Write("Movie title: ");
