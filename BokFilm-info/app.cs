@@ -15,8 +15,7 @@ namespace BokFilm_info
         List<Movie> movies = new List<Movie>()
         {
             new Movie("Shrek", "2001", "Fantasy"),
-            new Movie("Shrek 2", "2004", "Action/Adventure")
-            
+            new Movie("Shrek 2", "2004", "Action/Adventure")  
         };
 
         public void Run()
@@ -42,7 +41,6 @@ namespace BokFilm_info
                     case "3":
                         running = false;
                         break;
-
                 }
             }
             
@@ -59,8 +57,8 @@ namespace BokFilm_info
                 Console.WriteLine($"About: {movie._genre}");
                 Console.WriteLine("--------------------------------");
             }
-            
-
+            Console.WriteLine("Press ENTER for menu")
+            Console.ReadLine();
         }
 
         public void AddMovies()
@@ -68,10 +66,13 @@ namespace BokFilm_info
             Console.Clear();
             Console.Write("Movie title: ");
             _movie = Console.ReadLine();
-             Console.WriteLine("Year of the movie: ");
+
+             Console.Write("Year of the movie: ");
             _year = Console.ReadLine();
-            Console.WriteLine("Genre of the movie: ");
+
+            Console.Write("Genre of the movie: ");
             _genre = Console.ReadLine();
+
             movies.Add(new Movie(_movie, _year, _genre));
             ShowNewest();
         }
@@ -83,6 +84,8 @@ namespace BokFilm_info
             Console.WriteLine($"{_movie} ({_year})");
             Console.WriteLine($"About: {_genre}");
             Console.WriteLine("--------------------------------");
+
+            Console.WriteLine("Press ENTER for menu")
             Console.ReadLine();
         }
     }
