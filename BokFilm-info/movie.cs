@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BokFilm_info
 {
-    internal class movie
+    internal class Movie
     {
     }
 }
